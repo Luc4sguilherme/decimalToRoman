@@ -22,7 +22,7 @@ function decimalToRoman(number) {
   }
 
   if(number === undefined || number.length == 0) {
-    throw new Error('Argument empty!')
+    throw new Error('Empty argument!')
   }
 
   if(isNaN(number)) {
