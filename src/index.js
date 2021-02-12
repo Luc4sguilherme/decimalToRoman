@@ -1,6 +1,6 @@
 /**
- * Takes in a number integer, returns a roman numeral string
- * @param decimal 
+ * Takes in a number integer [1-3999], returns a roman numeral string
+ * @param decimal
  * @returns {string}
 */
 function decimalToRoman(number) {
@@ -21,8 +21,16 @@ function decimalToRoman(number) {
     I: 1
   }
 
-  if(number <= 0 || isNaN(number)) {
+  if(number === undefined || number.length == 0) {
+    throw new Error('Argument empty!')
+  }
+
+  if(isNaN(number)) {
     throw new Error('Invalid number!')
+  }
+
+  if(number <= 0 || number > 3999 ) {
+    throw new Error('Number out of range [1-3999]!')
   }
 
   for (let i of Object.keys(roman)) {
