@@ -1,7 +1,7 @@
 /**
- * Takes in a number integer [1-3999], returns a roman numeral string
- * @param decimal
- * @returns {string}
+ * Takes in a number integer, returns a roman numeral string.
+ * @param {number} number range [1-3999]
+ * @return {string}
 */
 function decimalToRoman(number) {
   let symbols = '';
